@@ -200,7 +200,7 @@
             <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
         </div>
         <div class="code-preview">
-            <pre><code>
+            <pre>
 <span class="tag">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;html&gt;</span>
     <span class="tag">&lt;head&gt;</span>
@@ -217,7 +217,7 @@
         <span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
     <span class="tag">&lt;/body&gt;</span>
 <span class="tag">&lt;/html&gt;</span>
-    </code></pre>
+    </pre>
         </div>
     </div>
 
@@ -229,7 +229,7 @@
                 <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
             </div>
             <div class="code-preview">
-                <pre><code>
+                <pre>
 <span class="tag">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;html&gt;</span>
     <span class="tag">&lt;head&gt;</span>
@@ -242,7 +242,7 @@
        <span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
     <span class="tag">&lt;/body&gt;</span>
 <span class="tag">&lt;/html&gt;</span>
-            </code></pre>
+            </pre>
             </div>
         </div>
 
@@ -253,11 +253,11 @@
                 <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
             </div>
             <div class="code-preview">
-                <pre><code>
+                <pre>
 <span class="css-selector">h1</span> <span class="tag">{</span>
     <span class="css-property">background-color</span>: <span class="css-value">brown</span>;
 <span class="tag">}</span>
-            </code></pre>
+            </pre>
             </div>
         </div>
 
@@ -265,7 +265,7 @@
         <script>
             function copyCode(button) {
                 // Select code text
-                const code = button.parentElement.nextElementSibling.querySelector("code").innerText;
+                const code = button.parentElement.nextElementSibling.querySelector("pre").innerText;
 
                 // Copy to clipboard
                 navigator.clipboard.writeText(code).then(() => {
