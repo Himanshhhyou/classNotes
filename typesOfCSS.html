@@ -36,15 +36,16 @@
         /* VS Code style preview box */
         .code-container {
             position: relative;
-            background-color: #ffffff;
-            border: 1px solid #333;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
             border-radius: 8px;
             margin-top: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
         }
 
         .code-tab {
-            background-color: #2d2d2d;
+            background-color: #563d7c;
             padding: 8px 16px;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
@@ -55,7 +56,7 @@
         }
 
         .code-tab span {
-            background-color: #e06c75;
+            background-color: aqua;
             border-radius: 50%;
             display: inline-block;
             width: 10px;
@@ -80,39 +81,39 @@
         /* VS Code syntax colors */
 
         .tag {
-            color: #800000;
+            color: brown;
         }
 
         .attribute {
-            color: #795E26;
+            color: red;
         }
 
         .string {
-            color: #0451A5;
+            color: blue;
         }
 
         .comment {
-            color: #008000;
+            color: green;
             font-style: italic;
         }
 
         .css-selector {
-            color: #0000FF;
+            color: brown;
         }
 
         .css-property {
-            color: #af00db;
+            color: red;
         }
 
         .css-value {
-            color: #0451A5;
+            color: blue;
         }
 
 
         /* Copy Button */
         .copy-button {
             position: absolute;
-            top: 8px;
+            
             right: 16px;
             background-color: #2d2d2d;
             color: #dcdcdc;
@@ -171,7 +172,7 @@
 
     <div class="code-container">
         <div class="code-tab">
-            <span></span><span></span><span></span>
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
             <strong style="margin-left: 10px;">inline.html</strong>
             <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
         </div>
@@ -195,7 +196,7 @@
     <h2>Internal CSS</h2>
     <div class="code-container">
         <div class="code-tab">
-            <span></span><span></span><span></span>
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
             <strong style="margin-left: 10px;">internal.html</strong>
             <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
         </div>
@@ -224,7 +225,7 @@
     <h2>External CSS</h2>
         <div class="code-container">
             <div class="code-tab">
-                <span></span><span></span><span></span>
+                <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
                 <strong style="margin-left: 10px;">external.html</strong>
                 <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
             </div>
@@ -248,7 +249,7 @@
 
         <div class="code-container">
             <div class="code-tab">
-                <span></span><span></span><span></span>
+                <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
                 <strong style="margin-left: 10px;">style.css</strong>
                 <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
             </div>
