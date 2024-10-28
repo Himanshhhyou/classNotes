@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Notes with TOC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #563d7c;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+        .header-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .code-container {
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .code-container pre {
+            margin: 0;
+            font-family: Consolas, "Courier New", monospace;
+        }
+        .toc-container {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .toc-container h3 {
+            margin-bottom: 15px;
+        }
+        .toc-container a {
+            color: #563d7c;
+            text-decoration: none;
+        }
+        .toc-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Class Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="htmlClass.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="cssClass.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="jsClass.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="container mt-4">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" alt="Header Image" class="header-img">
+        <h1 class="mt-4">Class Notes & Code Examples</h1>
+        <p>Welcome to the class notes and code examples page! Here, you can find the code snippets and notes discussed in class, along with helpful visuals.</p>
+    </section>
+
+    <!-- Table of Contents Section -->
+    <section class="container toc-container">
+        <h3>Table of Contents</h3>
+        <ul class="list-unstyled">
+            <li><a href="#introduction">1. HTML</a></li>
+            <li><a href="#code-snippets">2. CSS</a></li>
+            <li><a href="#conclusion">3. JavaScript</a></li>
+        </ul>
+    </section>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

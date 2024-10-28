@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Guide</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: #563d7c;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+        /* Custom button styles */
+        .content-button {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            color: #ffffff;
+            background-color: #563d7c;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .content-button:hover {
+            background-color: #643ca0;
+            color: #ffffff;
+        }
+        .content-button:focus {
+            outline: none;
+            box-shadow: 0 0 10px #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Class Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="htmlClass.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="cssClass.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="jsClass.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="display-4 text-center mb-4">CSS Guide</h1>
+
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title mb-3">Table of Contents</h2>
+                
+                <!-- Button-styled list item -->
+                <a href="typesOfCSS.html" class="content-button">Types of CSS</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

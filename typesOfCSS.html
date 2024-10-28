@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of CSS</title>
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+           
+        }
+        .navbar {
+            background-color: #563d7c;
+            margin: -20px -20px 20px -20px;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        h2,
+        h3 {
+
+            margin-top: 30px;
+        }
+
+        a {
+            color: #98c379;
+            text-decoration: none;
+        }
+
+        /* VS Code style preview box */
+        .code-container {
+            position: relative;
+            background-color: #ffffff;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .code-tab {
+            background-color: #2d2d2d;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+
+        .code-tab span {
+            background-color: #e06c75;
+            border-radius: 50%;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 6px;
+        }
+
+        .code-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .code-preview code {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.9em;
+        }
+
+        /* VS Code syntax colors */
+
+        .tag {
+            color: #800000;
+        }
+
+        .attribute {
+            color: #795E26;
+        }
+
+        .string {
+            color: #0451A5;
+        }
+
+        .comment {
+            color: #008000;
+            font-style: italic;
+        }
+
+        .css-selector {
+            color: #0000FF;
+        }
+
+        .css-property {
+            color: #af00db;
+        }
+
+        .css-value {
+            color: #0451A5;
+        }
+
+
+        /* Copy Button */
+        .copy-button {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            background-color: #2d2d2d;
+            color: #dcdcdc;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.8em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-button:hover {
+            background-color: #3e3e3e;
+        }
+
+        .copy-button:active {
+            background-color: #555;
+        }
+
+        /* Copy message */
+        .copy-button.copied::after {
+            content: "Copied!";
+            color: #98c379;
+            font-weight: bold;
+            position: absolute;
+            top: -25px;
+            right: 16px;
+            background: #2d2d2d;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Class Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="htmlClass.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="cssClass.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="jsClass.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Types Of CSS</h1>
+    <hr>
+
+    <h2>Inline CSS</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span></span><span></span><span></span>
+            <strong style="margin-left: 10px;">inline.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Inline CSS<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1 </span><span class="attribute">style</span>=<span class="string">"color: blue;"</span><span class="tag">&gt;</span>Inline css<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Inline css has highest priority<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</code></pre>
+        </div>
+    </div>
+
+    <h2>Internal CSS</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span></span><span></span><span></span>
+            <strong style="margin-left: 10px;">internal.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Internal CSS<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">h1</span> <span class="tag">{</span>
+                <span class="css-property">color</span>: <span class="css-value">aqua</span><span class="tag">;</span>
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Internal css<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Internal css priority depends on order<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+    </code></pre>
+        </div>
+    </div>
+
+    <h2>External CSS</h2>
+        <div class="code-container">
+            <div class="code-tab">
+                <span></span><span></span><span></span>
+                <strong style="margin-left: 10px;">external.html</strong>
+                <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="code-preview">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>External CSS<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;link </span><span class="attribute">rel</span>=<span class="string">"stylesheet"</span> <span class="attribute">href</span>=<span class="string">"style.css"</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+       <span class="tag">&lt;h1&gt;</span>External css<span class="tag">&lt;/h1&gt;</span>
+       <span class="tag">&lt;p&gt;</span>External css priority depends on order<span class="tag">&lt;/p&gt;</span>
+       <span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </code></pre>
+            </div>
+        </div>
+
+        <div class="code-container">
+            <div class="code-tab">
+                <span></span><span></span><span></span>
+                <strong style="margin-left: 10px;">style.css</strong>
+                <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+            </div>
+            <div class="code-preview">
+                <pre><code>
+<span class="css-selector">h1</span> <span class="tag">{</span>
+    <span class="css-property">background-color</span>: <span class="css-value">brown</span>;
+<span class="tag">}</span>
+            </code></pre>
+            </div>
+        </div>
+
+
+        <script>
+            function copyCode(button) {
+                // Select code text
+                const code = button.parentElement.nextElementSibling.querySelector("code").innerText;
+
+                // Copy to clipboard
+                navigator.clipboard.writeText(code).then(() => {
+                    // Show "Copied!" message
+                    button.classList.add("copied");
+
+                    // Remove "Copied!" message after 2 seconds
+                    setTimeout(() => {
+                        button.classList.remove("copied");
+                    }, 2000);
+                }).catch(err => console.log('Failed to copy text: ', err));
+            }
+        </script>
+</body>
+
+ <!-- Bootstrap and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
