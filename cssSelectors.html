@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of CSS</title>
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+           
+        }
+        .navbar {
+            background-color: #563d7c;
+            margin: -20px -20px 20px -20px;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        h2,
+        h3 {
+
+            margin-top: 30px;
+        }
+
+        a {
+            color: #98c379;
+            text-decoration: none;
+        }
+
+        /* VS Code style preview box */
+        .code-container {
+            position: relative;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+        .output-container {
+            position: relative;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+
+        .code-tab {
+            background-color: #563d7c;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+
+        .output-tab {
+            background-color: #000000;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+
+        .code-tab span {
+            background-color: aqua;
+            border-radius: 50%;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 6px;
+        }
+
+        .code-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+        .output-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .code-preview code {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.9em;
+        }
+
+        /* VS Code syntax colors */
+
+        .tag {
+            color: brown;
+        }
+
+        .attribute {
+            color: red;
+        }
+
+        .string {
+            color: blue;
+        }
+
+        .comment {
+            color: green;
+            font-style: italic;
+        }
+
+        .css-selector {
+            color: brown;
+        }
+
+        .css-property {
+            color: red;
+        }
+
+        .css-value {
+            color: blue;
+        }
+
+
+        /* Copy Button */
+        .copy-button {
+            position: absolute;
+            
+            right: 16px;
+            background-color: #ffffff;
+            color: #563d7c;
+            font-weight: bold;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.8em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+       
+
+
+
+        /* Copy message */
+        .copy-button.copied::after {
+            content: "Copied!";
+            color: #98c379;
+            font-weight: bold;
+            position: absolute;
+            top: -25px;
+            right: 16px;
+            background: #2d2d2d;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Class Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="htmlClass.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="cssClass.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="jsClass.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>CSS Selectors</h1>
+    <hr>
+
+    <h2>Universal Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">universal.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Universal Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="tag"><span class="css-selector">*</span>{</span>
+                <span class="css-property">color</span>: <span class="css-value">teal</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Universal selector<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Universal selector selects all elements in HTML<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </pre>
+        </div>
+    </div>
+
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/universalSelector.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+
+    
+
+    <h2>ID Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">id-Selector.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>ID Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">#head{</span>
+                <span class="css-property">border</span>: <span class="css-value">2px solid red</span>;
+                <span class="css-property">background-color</span>: <span class="css-value">aqua</span>;
+            <span class="tag">}</span>
+            <span class="css-selector">#para {</span>
+                <span class="css-property">color</span>: <span class="css-value">red</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1</span> <span class="attribute">id</span>=<span class="string">"head"</span><span class="tag">&gt;</span>ID Selector<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p</span> <span class="attribute">id</span>=<span class="string">"para"</span><span class="tag">&gt;</span>ID selector selects elements with specified ID<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>ID should be unique<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </pre>
+        </div>
+    </div>
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/idSelector.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+
+    
+
+    <h2>Class Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">class-selector.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+        <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Class Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">.para{</span>
+                <span class="css-property">color</span>: <span class="css-value">chocolate</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Class Selector<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p</span> <span class="attribute">class</span>=<span class="string">"para"</span><span class="tag">&gt;</span>Class selector selects elements with specified Class<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p</span> <span class="attribute">class</span>=<span class="string">"para"</span><span class="tag">&gt;</span>Class can be same for multiple HTML elements<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+        </pre>
+        </div>
+    </div>
+    
+
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/classSelector.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+
+    
+    
+
+    <h2>Tag Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">tag-selector.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Tag Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">p{</span>
+                <span class="css-property">color</span>: <span class="css-value">blue</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Tag selector<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Tag selector selects the element by tag name<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Tag selector selects all tags specified for selection<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </pre>
+        </div>
+    </div>
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/tagSelector.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+    
+
+    <h2>Descendant Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">descendant-selector.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Descendant Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">ul li span {</span>
+                <span class="css-property">background-color</span>: <span class="css-value">yellow</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h2&gt;</span>Fruits<span class="tag">&lt;/h2&gt;</span>
+        <span class="tag">&lt;ul&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Apple<span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span><span class="tag">&lt;span&gt;</span>Banana<span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Cherry<span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;h2&gt;</span>Birds<span class="tag">&lt;/h2&gt;</span>
+        <span class="tag">&lt;ol&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Eagle<span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Sparrow<span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Parrot<span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;/ol&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </pre>
+        </div>
+    </div>
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/descendant.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+
+    
+        <script>
+            function copyCode(button) {
+                // Select code text
+                const code = button.parentElement.nextElementSibling.querySelector("pre").innerText;
+
+                // Copy to clipboard
+                navigator.clipboard.writeText(code).then(() => {
+                    // Show "Copied!" message
+                    button.classList.add("copied");
+
+                    // Remove "Copied!" message after 2 seconds
+                    setTimeout(() => {
+                        button.classList.remove("copied");
+                    }, 2000);
+                }).catch(err => console.log('Failed to copy text: ', err));
+            }
+        </script>
+</body>
+
+ <!-- Bootstrap and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

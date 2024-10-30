@@ -43,9 +43,28 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             font-weight: bold;
         }
+        .output-container {
+            position: relative;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
 
         .code-tab {
             background-color: #563d7c;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+        .output-tab {
+            background-color: #000000;
             padding: 8px 16px;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
@@ -65,6 +84,14 @@
         }
 
         .code-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+        .output-preview {
             background-color: #ffffff;
             color: #000000;
             padding: 20px;
@@ -190,6 +217,17 @@
         </div>
     </div>
 
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/inline.png" alt="output" width="100%">
+        </div>
+    </div>
+
     <h2>Internal CSS</h2>
     <div class="code-container">
         <div class="code-tab">
@@ -218,6 +256,18 @@
     </pre>
         </div>
     </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/internal.png" alt="output" width="100%">
+        </div>
+    </div>
+
 
     <h2>External CSS</h2>
         <div class="code-container">
@@ -256,6 +306,17 @@
     <span class="css-property">background-color</span>: <span class="css-value">brown</span>;
 <span class="tag">}</span>
             </pre>
+            </div>
+        </div>
+
+        <div class="output-container">
+            <div class="output-tab">
+    
+                <strong style="margin-left: 10px;">Output</strong>
+        
+            </div>
+            <div class="output-preview">
+                <img src="img/external.png" alt="output" width="100%">
             </div>
         </div>
 
