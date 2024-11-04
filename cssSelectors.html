@@ -428,6 +428,262 @@
         </div>
     </div>
     
+    
+
+    <h2>Child Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span>
+            <span style="background-color: yellow;"></span>
+            <span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">child-selector.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Child Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">ul &gt; li {</span>
+                <span class="css-property">color</span>: <span class="css-value">green</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>Birds<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;ul&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Parrot
+                <span class="tag">&lt;ol&gt;</span>
+                    <span class="tag">&lt;li&gt;</span>Green Parrot<span class="tag">&lt;/li&gt;</span>
+                    <span class="tag">&lt;li&gt;</span>Yellow Parrot<span class="tag">&lt;/li&gt;</span>
+                    <span class="tag">&lt;li&gt;</span>White Parrot<span class="tag">&lt;/li&gt;</span>
+                <span class="tag">&lt;/ol&gt;</span>
+            <span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Sparrow<span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Crow<span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;/ul&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+            </pre>
+        </div>
+    </div>
+    
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/chileSelector.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+    <h2>Adjacent Sibling Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span>
+            <span style="background-color: yellow;"></span>
+            <span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">adjacent-sibling.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Adjacent Sibling Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">p+p{</span>
+                <span class="css-property">background-color</span>: <span class="css-value">aqua</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse neque eos eaque tenetur harum blanditiis, necessitatibus sapiente deserunt repellat, non vitae reiciendis quis molestiae quas, molestias deleniti labore at quaerat.<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse neque eos eaque tenetur harum blanditiis, necessitatibus sapiente deserunt repellat, non vitae reiciendis quis molestiae quas, molestias deleniti labore at quaerat.<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse neque eos eaque tenetur harum blanditiis, necessitatibus sapiente deserunt repellat, non vitae reiciendis quis molestiae quas, molestias deleniti labore at quaerat.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+            </pre>
+        </div>
+    </div>
+    
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/adjacent-sibling.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+    
+    <h2>General Sibling Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span>
+            <span style="background-color: yellow;"></span>
+            <span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">general-sibling.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>General Sibling Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">h1~p{</span>
+                <span class="css-property">background-color</span>: <span class="css-value">aqua</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;h1&gt;</span>General sibling selector<span class="tag">&lt;/h1&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima eveniet harum delectus saepe non magnam vel nam id deleniti! Natus atque cumque dolor officia, aperiam perferendis iure harum amet!<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima eveniet harum delectus saepe non magnam vel nam id deleniti! Natus atque cumque dolor officia, aperiam perferendis iure harum amet!<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima eveniet harum delectus saepe non magnam vel nam id deleniti! Natus atque cumque dolor officia, aperiam perferendis iure harum amet!<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+                
+            </pre>
+        </div>
+    </div>
+    
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/general-sibling.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+
+    
+    <h2>Attribute Selector</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span>
+            <span style="background-color: yellow;"></span>
+            <span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">attribute1.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Attribute Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">input[placeholder]{</span>
+                <span class="css-property">border-radius</span>: <span class="css-value">10px</span>;
+                <span class="css-property">background-color</span>: <span class="css-value">red</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;form&gt;</span>
+            ID: <span class="tag">&lt;input <span class="attribute">type</span>="<span class="string">text</span>" <span class="attribute">placeholder</span>="<span class="string">Enter your id</span>"&gt;</span><br>
+            Password: <span class="tag">&lt;input <span class="attribute">type</span>="<span class="string">password</span>"&gt;</span><br>
+            <span class="tag">&lt;input <span class="attribute">type</span>="<span class="string">submit</span>" <span class="attribute">value</span>="<span class="string">Login</span>"&gt;</span>
+        <span class="tag">&lt;/form&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+                
+            </pre>
+        </div>
+    </div>
+    
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/attribute1.png" alt="output" width="100%">
+        </div>
+    </div>
+    
+
+    
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span>
+            <span style="background-color: yellow;"></span>
+            <span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">attribute2.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Attribute Value Selector<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">input[type="text"]{</span>
+                <span class="css-property">background-color</span>: <span class="css-value">lightblue</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+        <span class="tag">&lt;form&gt;</span>
+            ID: <span class="tag">&lt;input <span class="attribute">type</span>="<span class="string">text</span>"&gt;</span><br>
+            Pan: <span class="tag">&lt;input <span class="attribute">type</span>="<span class="string">text</span>"&gt;</span><br>
+            Password: <span class="tag">&lt;input <span class="attribute">type</span>="<span class="string">password</span>"&gt;</span><br>
+            <span class="tag">&lt;input<span class="attribute">type</span>="<span class="string">submit</span>" <span class="attribute">value</span>="<span class="string">Login</span>"&gt;</span>
+        <span class="tag">&lt;/form&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+                
+                
+            </pre>
+        </div>
+    </div>
+    
+    
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/attribute2.png" alt="output" width="100%">
+        </div>
+    </div>
+    
 
     
         <script>
