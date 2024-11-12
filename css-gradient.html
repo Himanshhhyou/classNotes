@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients in CSS</title>
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+           
+        }
+        .navbar {
+            background-color: #563d7c;
+            margin: -20px -20px 20px -20px;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        h2,
+        h3 {
+
+            margin-top: 30px;
+        }
+
+        a {
+            color: #98c379;
+            text-decoration: none;
+        }
+
+        /* VS Code style preview box */
+        .code-container {
+            position: relative;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+        .output-container {
+            position: relative;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+
+        .code-tab {
+            background-color: #563d7c;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+        .output-tab {
+            background-color: #000000;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+
+        .code-tab span {
+            background-color: aqua;
+            border-radius: 50%;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 6px;
+        }
+
+        .code-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+        .output-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .code-preview code {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.9em;
+        }
+
+        /* VS Code syntax colors */
+
+        .tag {
+            color: brown;
+        }
+
+        .attribute {
+            color: red;
+        }
+
+        .string {
+            color: blue;
+        }
+
+        .comment {
+            color: green;
+            font-style: italic;
+        }
+
+        .css-selector {
+            color: brown;
+        }
+
+        .css-property {
+            color: red;
+        }
+
+        .css-value {
+            color: blue;
+        }
+
+
+        /* Copy Button */
+        .copy-button {
+            position: absolute;
+            
+            right: 16px;
+            background-color: #ffffff;
+            color: #563d7c;
+            font-weight: bold;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.8em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+       
+
+
+
+        /* Copy message */
+        .copy-button.copied::after {
+            content: "Copied!";
+            color: #98c379;
+            font-weight: bold;
+            position: absolute;
+            top: -25px;
+            right: 16px;
+            background: #2d2d2d;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Class Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="htmlClass.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="cssClass.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="jsClass.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Gradients in CSS</h1>
+    <hr>
+
+    <h2>Linear-gradient</h2>
+
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">background-color.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Linear-gradient<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">body</span><span class="tag">{</span>
+                <span class="css-property">background-image</span>: <span class="css-value">linear-gradient(rgb(111, 178, 255), white)</span>;
+                <span class="css-property">height</span>: <span class="css-value">100vh</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                                </pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/gradient-1.png" alt="output" width="100%">
+        </div>
+    </div>
+<hr>
+
+
+    <h2>Radial-gradient</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">background-image.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Radial-gradient<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">body</span><span class="tag">{</span>
+                <span class="css-property">background-image</span>: <span class="css-value">radial-gradient(rgb(0, 119, 255), rgb(0, 0, 0))</span>;
+                <span class="css-property">height</span>: <span class="css-value">100vh</span>;
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+                </pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/gradient-2.png" alt="output" width="100%">
+        </div>
+    </div>
+
+    <h2>Repeating-linear-gradient</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">gradient-3.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>Repeating-linear-gradient<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">body</span><span class="tag">{</span>
+                <span class="css-property">background-image</span>: <span class="css-value">repeating-linear-gradient(rgb(111, 178, 255), white)</span>;   
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+                </pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/gradient-3.png" alt="output" width="100%">
+        </div>
+    </div>
+    <h2>Radial-gradient</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">background-image.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;title&gt;</span>-Repeating-radial-gradient<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;style&gt;</span>
+            <span class="css-selector">body</span><span class="tag">{</span>
+                <span class="css-property">background-image</span>: <span class="css-value">repeating-radial-gradient(red, white)</span>;  
+            <span class="tag">}</span>
+        <span class="tag">&lt;/style&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                
+                </pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/gradient-4.png" alt="output" width="100%">
+        </div>
+    </div>
+
+
+
+
+
+        <script>
+            function copyCode(button) {
+                // Select code text
+                const code = button.parentElement.nextElementSibling.querySelector("pre").innerText;
+
+                // Copy to clipboard
+                navigator.clipboard.writeText(code).then(() => {
+                    // Show "Copied!" message
+                    button.classList.add("copied");
+
+                    // Remove "Copied!" message after 2 seconds
+                    setTimeout(() => {
+                        button.classList.remove("copied");
+                    }, 2000);
+                }).catch(err => console.log('Failed to copy text: ', err));
+            }
+        </script>
+</body>
+
+ <!-- Bootstrap and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
