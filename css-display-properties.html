@@ -408,6 +408,79 @@
             <img src="img/list-item.png" alt="output" width="100%">
         </div>
     </div>
+
+    <h2>table</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">display-table.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Display table&lt;/title&gt;
+    &lt;style&gt;
+        .main {
+            display: table;
+            border: 1px solid black;
+        }
+        .row {
+            display: table-row;
+        }
+        .cell {
+            display: table-cell;
+            border: 1px solid black;
+            padding: 10px 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="main"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="cell"&gt;Name&lt;/div&gt;
+            &lt;div class="cell"&gt;Course&lt;/div&gt;
+            &lt;div class="cell"&gt;Mobile&lt;/div&gt;
+            &lt;div class="cell"&gt;Email&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="cell"&gt;Ram&lt;/div&gt;
+            &lt;div class="cell"&gt;DCA&lt;/div&gt;
+            &lt;div class="cell"&gt;5656589&lt;/div&gt;
+            &lt;div class="cell"&gt;ram@gmail.com&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="cell"&gt;syam&lt;/div&gt;
+            &lt;div class="cell"&gt;ccc&lt;/div&gt;
+            &lt;div class="cell"&gt;5656256&lt;/div&gt;
+            &lt;div class="cell"&gt;syam@gmail.com&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/display-table.png" alt="output" width="100%">
+        </div>
+    </div>
+
+
+
+
         <script>
             function copyCode(button) {
                 // Select code text

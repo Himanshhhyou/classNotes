@@ -7,6 +7,8 @@
     <title>Types of CSS</title>
        <!-- Bootstrap CSS -->
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism.css" rel="stylesheet" />
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.js"></script>
     <style>
         /* Body styling */
         body {
@@ -170,6 +172,9 @@
             padding: 3px 8px;
             font-size: 0.8em;
         }
+        .language-html{
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -279,6 +284,130 @@
         </div>
         <div class="output-preview">
             <img src="img/background-image.png" alt="output" width="100%">
+        </div>
+    </div>
+    <h2>background-attachment</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">background-attachment.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Background-attachment&lt;/title&gt;
+    &lt;style&gt;
+        body{
+            background-image: url("../img/billi.jpg");
+            background-attachment: fixed;   
+            /*background-attachment: scroll ;*/ 
+            color: #ffffff;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Background-attachment&lt;/h1&gt;
+    &lt;p&gt;-----------------&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/background-attachment.png" alt="output" width="100%">
+        </div>
+    </div>
+    <h2>background-repeat</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">background-repeat.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+                <pre><code class="language-html">
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;background-repeat&lt;/title&gt;
+    &lt;style&gt;
+        body{
+            background-image: url(../img/plant.jpg);
+            background-repeat: no-repeat;  /*repeat-x  |   repeat-y*/
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;background-repeat&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/background-repeat.png" alt="output" width="100%">
+        </div>
+    </div>
+
+    <h2>background-position</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">background-position.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;background-position&lt;/title&gt;
+    &lt;style&gt;
+        body{
+            background-image: url(../img/plant.jpg);
+            background-repeat: no-repeat;
+            background-position:  40px 20px;
+            height: 100vh;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;background-position&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+                
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div class="output-tab">
+
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/background-position.png" alt="output" width="100%">
         </div>
     </div>
         <script>
