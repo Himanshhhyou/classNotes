@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism.css" rel="stylesheet" />
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.js"></script>
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+           
+        }
+        .navbar {
+            background-color: #563d7c;
+            margin: -20px -20px 20px -20px;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        h2,
+        h3 {
+
+            margin-top: 30px;
+        }
+
+        a {
+            color: #98c379;
+            text-decoration: none;
+        }
+
+        /* VS Code style preview box */
+        .code-container {
+            position: relative;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+        .output-container {
+            position: relative;
+            background-color: #563d7c;
+            border: 1px solid #563d7c;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+
+        .code-tab {
+            background-color: #563d7c;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+        .output-tab {
+            background-color: #000000;
+            padding: 8px 16px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: #dcdcdc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+
+        .code-tab span {
+            background-color: aqua;
+            border-radius: 50%;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 6px;
+        }
+
+        .code-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+        .output-preview {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .code-preview code {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.9em;
+        }
+
+        /* VS Code syntax colors */
+
+        .tag {
+            color: brown;
+        }
+
+        .attribute {
+            color: red;
+        }
+
+        .string {
+            color: blue;
+        }
+
+        .comment {
+            color: green;
+            font-style: italic;
+        }
+
+        .css-selector {
+            color: brown;
+        }
+
+        .css-property {
+            color: red;
+        }
+
+        .css-value {
+            color: blue;
+        }
+
+
+        /* Copy Button */
+        .copy-button {
+            position: absolute;
+            
+            right: 16px;
+            background-color: #ffffff;
+            color: #563d7c;
+            font-weight: bold;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.8em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+       
+
+
+
+        /* Copy message */
+        .copy-button.copied::after {
+            content: "Copied!";
+            color: #98c379;
+            font-weight: bold;
+            position: absolute;
+            top: -25px;
+            right: 16px;
+            background: #2d2d2d;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Class Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="htmlClass.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="cssClass.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="jsClass.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>CSS Box Properties</h1>
+    <hr>
+
+
+
+
+    <h2>buttons</h2>
+    <div class="code-container">
+        <div class="code-tab">
+            <span style="background-color: red;"></span><span style="background-color: yellow;"></span><span style="background-color: green;"></span>
+            <strong style="margin-left: 10px;">button-design.html</strong>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </div>
+        <div class="code-preview">
+            <pre> <code class="language-html">           
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Button designs - box properties&lt;/title&gt;
+        &lt;style&gt;
+            button{
+                border: 0;
+                padding: 10px;
+                width: 8%;
+                border-radius: 20px;
+                color: #ffffff;
+                margin: 30px;
+            }
+            .b1{
+                background-color: purple;
+            }
+            .b2{
+                background-color: blue;
+                border-radius: 0px;
+            }
+            .b3{
+                background-color: transparent;
+                color: green;
+                border: 2px solid green;
+                border-radius: 0;
+            }
+
+            .b1:hover{
+                background-color: transparent;
+                border: 2px solid purple;
+                color: purple;
+            }
+            .b2:hover{
+                background-color: #5465ff;
+
+            }
+            .b3:hover{
+                border-radius: 20px;
+                transition: 0.3s;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;button class="b1"&gt;Sign up&lt;/button&gt;
+        &lt;button class="b2"&gt;Get Started&lt;/button&gt;
+        &lt;button class="b3"&gt;Register Now&lt;/button&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+</div>
+</div>
+
+<div class="output-container">
+    <div class="output-tab">
+        
+            <strong style="margin-left: 10px;">Output</strong>
+    
+        </div>
+        <div class="output-preview">
+            <img src="img/button-design.png" alt="output" width="100%">
+        </div>
+    </div>
+
+
+
+        <script>
+            function copyCode(button) {
+                // Select code text
+                const code = button.parentElement.nextElementSibling.querySelector("pre").innerText;
+
+                // Copy to clipboard
+                navigator.clipboard.writeText(code).then(() => {
+                    // Show "Copied!" message
+                    button.classList.add("copied");
+
+                    // Remove "Copied!" message after 2 seconds
+                    setTimeout(() => {
+                        button.classList.remove("copied");
+                    }, 2000);
+                }).catch(err => console.log('Failed to copy text: ', err));
+            }
+        </script>
+</body>
+
+ <!-- Bootstrap and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
